@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "productName": "Cycle",
+    "price": "$16.00",
+    "discount": "$12.00",
+    "img": "../../Assets/cycle.png"
+  },
+  {
+    "id": 2,
+    "productName": "Flowervase",
+    "price": "$12.00",
+    "discount": "$11.00",
+    "img": "../../Assets/vase.png"
+  },
+  {
+    "id": 3,
+    "productName": "Bag",
+    "price": "$33.00",
+    "discount": "$27.00",
+    "img": "../../Assets/bag.png"
+  },
+  {
+    "id": 4,
+    "productName": "Headphone",
+    "price": "$23.00",
+    "discount": "$17.00",
+    "img": "../../Assets/headPhone.png"
+  },
+  {
+    "id": 5,
+    "productName": "Clock",
+    "price": "$23.00",
+    "discount": "$17.00",
+    "img": "../../Assets/clock.png"
+  },
+  {
+    "id": 6,
+    "productName": "Lamp",
+    "price": "$23.00",
+    "discount": "$17.00",
+    "img": "../../Assets/lamp.png"
+  },
+  {
+    "id": 7,
+    "productName": "Pillow",
+    "price": "$23.00",
+    "discount": "$17.00",
+    "img": "../../Assets/pillow.png"
+  },
+  {
+    "id": 8,
+    "productName": "Chair",
+    "price": "$35.00",
+    "discount": "$28.00",
+    "img": "../../Assets/woodChair.png"
+  }
+]
