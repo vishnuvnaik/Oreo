@@ -1,0 +1,296 @@
+.rowlist {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8c99e0;
+  margin-left: -8px;
+  padding: 30px;
+  color: whitesmoke;
+  min-height: 165px;
+  box-sizing: inherit;
+  // margin-top: 64px;
+  // display: flex;
+  // flex-direction: row;
+  // background-color: #8c99e0;
+  // min-height: 165px;
+  // padding: 20px;
+  // justify-content: space-between;
+  // width: 100%;
+}
+.productSizelist {
+  height: 67px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.productColorlist {
+  font-family: lato;
+  font-size: 23px;
+  color: white;
+}
+.productWelcomelist {
+  font-family: lato, monospace;
+  font-size: 14px;
+  color: white;
+}
+.productNamelist {
+  min-width: 770px;
+  max-width: 100%;
+}
+.pathlist {
+  width: 300px;
+  border-radius: 50px;
+  background-color: #b8c0e2;
+  display: flex;
+  align-items: center;
+  position: relative;
+  // margin-left: 150px;
+}
+.homeIcon1list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  // border: 1px solid #aab3e7;
+  border-radius: 30px;
+  padding: 5px;
+  // width: 350px;
+  height: 46px;
+  margin-left: 12px;
+}
+.oreo1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.iconHomeColorlist {
+  color: white;
+  margin-right: 5px;
+}
+.wordStyle {
+  color: #888;
+  margin-left: 7px;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif, monospace;
+}
+.wordStyle1 {
+  margin-left: 5px;
+  font-size: 17px;
+  margin-left: 7px;
+  font-family: "Montserrat", sans-serif, monospace;
+}
+.containerFluidlist {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: -65px;
+  // width: 90%;
+  // display: flex;
+  // z-index: 3;
+  // top: -64px;
+  // position: relative;
+  // justify-content: center;
+}
+.rowFlexlist {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: white;
+  border-radius: 3px;
+}
+.collist {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.topContainer {
+  top: 48px;
+  position: absolute;
+  // display: flex;
+}
+.productItemlist {
+  background-color: white;
+  width: 80%;
+  box-shadow: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  justify-content: center;
+}
+.firstcontainerlist {
+  display: flex;
+}
+.bobylist {
+  color: #424242;
+  font-weight: 400;
+  // padding: 20px;
+  font-size: 14px;
+  width: 840px;
+}
+.rowWiselist {
+  display: flex;
+  flex-direction: row;
+  height: 77px;
+  justify-content: space-evenly;
+}
+.imagesize {
+  width: 48px;
+  height: 48px;
+}
+.Image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+}
+.ProductlistName {
+  display: flex;
+  align-items: center;
+}
+.details {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ProductlistName {
+  width: 160px;
+}
+.amount {
+  width: 85px;
+  display: flex;
+  align-items: center;
+}
+.stock {
+  width: 105px;
+  display: flex;
+  align-items: center;
+}
+.Action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+}
+.imagButton {
+  width: 47px;
+  height: 38px;
+  // background-color: #888;
+  justify-content: center;
+
+  align-items: center;
+  display: flex;
+}
+.imagButton1 {
+  width: 40px;
+  height: 38px;
+  // background-color: #888;
+  justify-content: center;
+  padding-left: 5px;
+  align-items: center;
+  display: flex;
+}
+
+.rowlistbutton {
+  display: flex;
+  flex-direction: row;
+  // width: 130px;
+  // align-items: center;
+  // background-color: white;
+
+  justify-content: space-between;
+}
+
+.Imagehead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.ProductlistNamehead {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.detailshead {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.ProductlistNamehead {
+  width: 160px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.amounthead {
+  width: 85px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.stockhead {
+  width: 105px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.Actionhead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.contentsNav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8c99e0;
+  margin-left: -8px;
+  padding: 30px;
+  color: whitesmoke;
+  min-height: 165px;
+  box-sizing: inherit;
+}
+
+.containerMain {
+  top: 48px;
+  position: absolute;
+}
+.prodFont {
+  font-size: 20px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.welcomeFont {
+  font-size: 13px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.contentRoute {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  div {
+    font-family: "Montserrat", Arial, Tahoma, sans-serif;
+  }
+}

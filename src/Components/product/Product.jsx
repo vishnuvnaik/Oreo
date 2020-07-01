@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import { Typography } from "@material-ui/core";
-import "./product.scss";
-import productData from "./product.json";
+import "./productStyle.scss";
+import productData from "./productDetail.json";
 
 class Product extends Component {
   constructor(props) {
@@ -22,11 +22,15 @@ class Product extends Component {
         <div className="productCard" key={product.id}>
           <img src={product.img} width="100%" />
           <div className="productData flexColumn">
-            <div variant="body1">{product.productName}</div>
+            <div className="productName" variant="body1">
+              {product.productName}
+            </div>
             <div variant="body2">
               <div className="flexRow productCostRow">
                 <div>{product.price}</div>
-                <div style={{ color: "red", padding: "5px" }}>
+                <div
+                  style={{ color: "red", padding: "10px", paddingTop: "8px" }}
+                >
                   {product.discount}
                 </div>
               </div>

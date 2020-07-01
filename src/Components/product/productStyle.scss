@@ -10,6 +10,7 @@
   padding: 30px;
   color: whitesmoke;
   min-height: 165px;
+  box-sizing: inherit;
 }
 
 .containerMain {
@@ -27,6 +28,7 @@
 .contentRoute {
   display: flex;
   padding: 10px;
+  align-items: center;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.3);
   div {
@@ -64,7 +66,17 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  top: -125px;
+  top: -65px;
+}
+.flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .productCards {
