@@ -277,3 +277,70 @@
   display: flex;
   flex-direction: row;
 }
+
+.rowP {
+  margin-top: 64px;
+  display: flex;
+  background-color: #8c99e0;
+  height: 150px;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.productSizeP {
+  height: 67px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.productColorP {
+  font-size: 20px;
+  color: white;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.productWelcomeP {
+  font-size: 13px;
+  color: white;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.pathP {
+  display: flex;
+  justify-content: flex-end;
+}
+.homeIcon1P {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #b8c0e2;
+  border-radius: 30px;
+  padding: 5px;
+  min-width: 300px;
+  max-width: 350px;
+  height: 46px;
+  margin-left: 12px;
+}
+.oreo1 {
+  // font-family: "Montserrat",sans-serif;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.iconHomeColorP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 5px;
+}
+.wordStyle {
+  color: #888;
+
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.wordStyle1 {
+  font-size: 13px;
+}

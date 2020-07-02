@@ -26,8 +26,9 @@ import "./Dashboard.scss";
 import Product from "../product/Product";
 import ProductList from "../productList/ProductList";
 import ProductDetails from "../productDetails/ProductDetails";
+import DrawerContent from "../drawerContent/DrawerContent";
 
-const drawerWidth = 230;
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
   },
   closeMenuButton: {
     marginRight: "auto",
@@ -206,7 +206,7 @@ function ResponsiveDrawer(props) {
       </AppBar>
 
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-      <Hidden smUp implementation="css">
+      <Hidden mdDown implementation="css">
         <Drawer
           container={container}
           variant="temporary"
@@ -220,65 +220,10 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
         >
-          <div>
-            <div className={classes.toolbar} />
-            <div className="topdrawer">
-              <div className="homeIcon">
-                <div onClick={clickHome}>
-                  <HomeIcon className="iconColor" />
-                </div>
-                <div className="oreo">Oreo</div>
-              </div>
-              <div className="homeIcon">
-                <div>
-                  <PersonIcon className="iconColor" />
-                </div>
-                <div className="oreo">User</div>
-              </div>
-            </div>
-            <div>
-              <div className="header">
-                <div className="headerMain">-- MAIN</div>
-              </div>
-              <div></div>
-            </div>
-            <div className="header1">
-              <div>
-                <div className="expansion">
-                  <div className="expansion">
-                    <ShoppingCartIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", paddingRight: "3px" }}
-                    />
-                    <div className="ecommerce">Ecommerce</div>
-                  </div>
-                  <div onClick={showButton}>
-                    <NavigateNextIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", marginTop: "10px" }}
-                    />
-                  </div>
-                </div>
-                {{ iconDisplay } === true ? (
-                  <div>
-                    <div>
-                      <div className="expansion">
-                        <ArrowRightAltIcon />
-                        <div>Dashboard</div>
-                      </div>
-                      <div className="expansion">
-                        <ArrowRightAltIcon />
-                        <div>Product</div>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            </div>
-          </div>
+          <DrawerContent screenChanging={screenChanging} />
         </Drawer>
       </Hidden>
-      <Hidden xsDown implementation="css">
+      <Hidden smDown implementation="css">
         <Drawer
           className={classes.drawer}
           classes={{
@@ -288,102 +233,42 @@ function ResponsiveDrawer(props) {
           open
           anchor="left"
         >
-          <div>
-            <div className={classes.toolbar} />
-            <div className="topdrawer">
-              <div className="homeIcon">
-                <div onClick={clickHome}>
-                  <HomeIcon className="iconColor" />
-                </div>
-                <div className="oreo">Oreo</div>
-              </div>
-              <div className="userIcon">
-                <div>
-                  <PersonIcon className="iconColor" />
-                </div>
-                <div className="oreo">User</div>
-              </div>
-            </div>
-            <div>
-              <div className="header">
-                <div className="headerMain">-- MAIN</div>
-              </div>
-              <div></div>
-            </div>
-            <div className="header1">
-              <div>
-                <div className="expansion">
-                  <div className="expansion">
-                    <ShoppingCartIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", paddingRight: "3px" }}
-                    />
-                    <div className="ecommerce">Ecommerce</div>
-                  </div>
-                  <div onClick={showButton}>
-                    <NavigateNextIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", marginTop: "10px" }}
-                    />
-                  </div>
-                </div>
+          <DrawerContent screenChanging={screenChanging} />
+        </Drawer>
+      </Hidden>
 
+      <main className={classes.content}>
+        <div className="rowP">
+          <div className="productSizeP">
+            <div className="productNameP">
+              <div className="productColorP">{choice}</div>
+              <small className="productWelcomeP">Welcome to Oreo</small>
+            </div>
+            <div className="pathP">
+              <div className="homeIcon1P">
                 <div>
-                  <div>
-                    <div
-                      className="expansion1"
-                      onClick={() => screenChanging("dashboard")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "20px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Dashboard</div>
-                    </div>
-                    <div
-                      className="expansion1"
-                      onClick={() => screenChanging("product")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "20px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Product</div>
-                    </div>
-                    <div
-                      className="expansion1"
-                      onClick={() => screenChanging("productlist")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "20px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Product List</div>
-                    </div>
-                    <div
-                      className="expansion1"
-                      onClick={() => screenChanging("productdetails")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "20px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Product Details</div>
-                    </div>
-                  </div>
+                  <HomeIcon
+                    className="iconHomeColorP"
+                    style={{ fontSize: "18px" }}
+                  />
+                </div>
+                <div className="oreo1">
+                  <div className="wordStyle1">Oreo</div>
+                  <div className="wordStyle">/</div>
+                  <div className="wordStyle1">eCommerce</div>
+                  <div className="wordStyle">/</div>
+                  <div className="wordStyle">{choice}</div>
                 </div>
               </div>
             </div>
           </div>
-        </Drawer>
-      </Hidden>
+        </div>
 
-      <main>
-        {choice === "productlist" ? (
+        {choice === "Product List" ? (
           <ProductList />
-        ) : choice === "product" ? (
+        ) : choice === "Product" ? (
           <Product />
-        ) : choice === "productdetails" ? (
+        ) : choice === "Product Details" ? (
           <ProductDetails />
         ) : null}
       </main>
@@ -392,23 +277,3 @@ function ResponsiveDrawer(props) {
 }
 
 export default ResponsiveDrawer;
-// import React, { Component } from "react";
-// import { withRouter } from "react-router-dom";
-// import AppBarComponent from "../Appbar/Appbar";
-// import ProductData from "../Product/Product";
-
-// class Dashboard extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {};
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <AppBarComponent />
-//         <ProductData />
-//       </div>
-//     );
-//   }
-// }
-// export default withRouter(Dashboard);
