@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
@@ -7,8 +6,6 @@ import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import MailIcon from "@material-ui/icons/Mail";
 import HomeIcon from "@material-ui/icons/Home";
-import PersonIcon from "@material-ui/icons/Person";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SwapHorizIcon from "@material-ui/icons/SwapHoriz";
 import EventIcon from "@material-ui/icons/Event";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
@@ -20,8 +17,6 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import "./Dashboard.scss";
 import Product from "../product/Product";
 import ProductList from "../productList/ProductList";
@@ -71,7 +66,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen, topIcon, iconDisplay] = React.useState(
+  const [mobileOpen, setMobileOpen] = React.useState(
     false
   );
   const [choice, setChoice] = React.useState("Product");
@@ -79,13 +74,7 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const clickHome = () => {
-    topIcon(!topIcon);
-  };
 
-  const showButton = () => {
-    iconDisplay(!iconDisplay);
-  };
   const screenChanging = (text) => {
     setChoice(text);
   };
@@ -118,8 +107,7 @@ function ResponsiveDrawer(props) {
                 <SwapHorizIcon
                   className="appbarIcons"
                   style={{ fontSize: "18px" }}
-
-                  // onClick={handleDrawerToggle}
+                  onClick={handleDrawerToggle}
                 />
               </div>
 

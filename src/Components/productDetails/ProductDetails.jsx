@@ -1,12 +1,24 @@
 import React, { Component } from "react";
 import HomeIcon from "@material-ui/icons/Home";
 import "./productDetails.scss";
-
+import productdata from "./ProductDetail.json";
+import StarIcon from "@material-ui/icons/Star";
+import StarBorderIcon from "@material-ui/icons/StarBorder";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import ReactStars from "react-rating-stars-component";
 class Product extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      image: "../../Assets/cycle.png",
+      index: "0",
+      id: "",
+      listId: "",
+    };
   }
+  imageButton = (img, id, index) => {
+    this.setState({ image: img, listId: "", index: index });
+  };
 
   render() {
     return (
@@ -32,22 +44,70 @@ class Product extends React.Component {
                   <div className="roworder">
                     <div className="columnWise">
                       <div>
-                        <img src="../../Assets/cycle.png" className="bigimg" />
+                        <img src={this.state.image} className="bigimg" />
                       </div>
-                      <div>add images here</div>
+                      <div className="mapDiv">
+                        {productdata.Products.map((data, index) => (
+                          <div
+                            key={data.id}
+                            onClick={() =>
+                              this.imageButton(data.img, data.id, index)
+                            }
+                          >
+                            <img src={data.img} className="smallImage" />
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="nameDetails">
-                      <div className="nameProd">Simple Black Clock</div>
-                      <div className="priceProd">Current Price: $180</div>
-                      <div className="prodDesc">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
+                    <div className="rowSide">
+                      <div className="nameProd">
+                        {productdata.DetailsList[this.state.index].title}
+                      </div>
+                      <div className="clockrow">
+                        <div className="priceProd">Current Price:</div>
+                        <div className="h3Stylecolor">
+                          {productdata.DetailsList[this.state.index].price}
+                        </div>
+                      </div>
+                      <div className="reviews">
+                        <ReactStars
+                          size={20}
+                          name="rate1"
+                          count={5}
+                          value={
+                            productdata.DetailsList[this.state.index].rating
+                          }
+                        />
+                        <div className="reviewCount">41 reviews</div>
+                      </div>
+                      <div className="para1style">
+                        {productdata.DetailsList[this.state.index].description}
+                      </div>
+                      <div className="para1style">
+                        78% of buyers enjoyed this product! (23 votes)
+                      </div>
+                      <div className="clockrow">
+                        <div className="h3Style">sizes:</div>
+                        <div className="h3Style21">s</div>
+                        <div className="h3Style2">m</div>
+                        <div className="h3Style2">l</div>
+                        <div className="h3Style2">xl</div>
+                      </div>
+                      <div className="clockrow">
+                        <div className="h3Style">colors:</div>
+                        <div className="colorContent">
+                          <div className="color"></div>
+                          <div className="color1"></div>
+                          <div className="color2"></div>
+                        </div>
                       </div>
 
-                      <div className="buyersEnjoy">78% of buyers enjoyed this product! (23 votes)</div>
+                      <div className="clockrow">
+                        <div className="cart">add to cart</div>
+                        <div className="cart">
+                          <FavoriteBorderIcon />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

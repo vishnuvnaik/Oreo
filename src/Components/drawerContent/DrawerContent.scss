@@ -1,0 +1,158 @@
+.stretchRight {
+  animation: stretchRight;
+  animation-name: stretchRight;
+  animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  transform-origin: 0% 0%;
+}
+.topdrawerheader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: space-around;
+}
+.iconColor {
+  color: gray;
+}
+.oreo {
+  color: gray;
+}
+.homeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #6572b8;
+  border-radius: 30px;
+  padding: 5px;
+  width: 102px;
+  height: 46px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  padding: 8px 12px;
+  position: relative;
+}
+.header1 {
+  margin-top: 15px;
+  border: none;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.headerMain {
+  font-size: 14px;
+  font-weight: 400;
+  color: #455a64;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.content {
+  font-size: 11px;
+  font-weight: 400;
+  color: #455a64;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes stretchRight {
+  0% {
+    transform: scaleX(0.3);
+  }
+  40% {
+    transform: scaleX(1.02);
+  }
+  60% {
+    transform: scaleX(0.98);
+  }
+  80% {
+    transform: scaleX(0.99);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.stretchLeft {
+  animation: stretchLeft;
+  animation-name: stretchLeft;
+  animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  transform-origin: 100% 0%;
+}
+@keyframes stretchLeft {
+  0% {
+    transform: scaleX(0.3);
+  }
+  40% {
+    transform: scaleX(1.02);
+  }
+  60% {
+    transform: scaleX(0.98);
+  }
+  80% {
+    transform: scaleX(1.01);
+  }
+  100% {
+    transform: scaleX(0.98);
+  }
+  80% {
+    transform: scaleX(1.01);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.profileAddress {
+  text-align: center;
+}
+.profileContact {
+  margin: 10px;
+
+  div {
+    margin: 15px 0px 15px 0px;
+  }
+}
+.userData > * {
+  margin: 3px;
+}
+.MuiDrawer-modal .MuiDrawer-paper {
+  overflow-y: scroll;
+}
+.MuiDrawer-modal .MuiDrawer-paper::-webkit-scrollbar {
+  display: none;
+}
+
+.userProfile {
+  top: 20px;
+  position: relative;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.profileName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sideBarList {
+  position: relative;
+  top: 10px;
+  margin: 10px;
+}

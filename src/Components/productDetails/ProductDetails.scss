@@ -158,6 +158,12 @@
   display: flex;
   flex-direction: row;
 }
+.rowSide {
+  display: flex;
+  margin-left: 10px;
+  flex-direction: column;
+  width: 100%;
+}
 .nameProd {
   font-size: 28px;
   font-style: bold;
@@ -172,8 +178,97 @@
   font-size: 20px;
   font-family: "Montserrat", Arial, Tahoma, sans-serif;
 }
+.clockrow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.h3Stylecolor {
+  font-size: 20px;
+  color: rgb(136, 136, 226);
+  font-style: bold;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.para1style {
+  font-size: 15px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 400;
+}
+.h3Style {
+  font-size: 20px;
+  height: 39px;
+  font-style: bold;
+  font-weight: 600;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.h3Style21 {
+  font-size: 20px;
+  height: 39px;
+  font-style: bold;
+  margin-left: 20px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.h3Style2 {
+  font-size: 20px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+  height: 39px;
+  font-style: bold;
+  font-weight: 600;
+  padding-left: 10px;
+}
 .buyersEnjoy {
   font-size: 18px;
   padding-top: 15px;
   font-family: "Montserrat", Arial, Tahoma, sans-serif;
+}
+.mapDiv {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.smallImage {
+  width: 58px;
+  height: 58px;
+  margin: 10px;
+  border: solid rgb(184, 172, 172) 1px;
+}
+.reviews {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.reviewCount {
+  font-size: 15px;
+  margin-left: 10px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+  color: gray;
+}
+.colorContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  background-color: orange;
+}
+
+.color1 {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  background-color: skyblue;
+}
+.color2 {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  background-color: greenyellow;
 }
