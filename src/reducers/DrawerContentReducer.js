@@ -1,6 +1,6 @@
 import { USER_SHOW, HOME_SHOW } from "../constants/actionTypes";
 const initialstate = {
-  drawershow: false,
+  drawershow: true,
   drawerslide: false,
 };
 export default (state = { drawershow: true, drawerslide: false }, action) => {
