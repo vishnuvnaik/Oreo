@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
@@ -22,13 +23,11 @@ import Product from "../product/Product";
 import ProductList from "../productList/ProductList";
 import ProductDetails from "../productDetails/ProductDetails";
 import DrawerContent from "../drawerContent/DrawerContent";
+import DashboardEcomm from "../dashboardEcommerce/DashboardEcommerce";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
   drawer: {
     [theme.breakpoints.up("md")]: {
       width: drawerWidth,
@@ -36,15 +35,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
+    display: "inline-block",
     backgroundColor: "#8c99e0",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       display: "none",
     },
   },
@@ -66,9 +66,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(
-    false
-  );
+  const [mobileOpen, setMobileOpen] = React.useState(false);
   const [choice, setChoice] = React.useState("Product");
 
   const handleDrawerToggle = () => {
@@ -83,10 +81,10 @@ function ResponsiveDrawer(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <div className={classes.root}>
+    <div className="rootClass">
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className="rootToolbar">
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -99,11 +97,11 @@ function ResponsiveDrawer(props) {
           <div className="row2">
             <div className="row">
               <img src="../../Assets/oreoLogo.svg" width="30px" />
-              <div className="alignment">
-                <div style={{ fontSize: "18px" }}>OREO</div>
+              <div className="toolBar1">
+                <div className="oreoName">OREO</div>
               </div>
 
-              <div className="alignment1">
+              <div className="toolBar2">
                 <SwapHorizIcon
                   className="appbarIcons"
                   style={{ fontSize: "18px" }}
@@ -111,25 +109,25 @@ function ResponsiveDrawer(props) {
                 />
               </div>
 
-              <div className="alignment">
+              <div className="toolBar1">
                 <EventIcon
                   className="appbarIcons"
                   style={{ fontSize: "18px" }}
                 />
               </div>
-              <div className="alignment">
+              <div className="toolBar1">
                 <MailIcon
                   className="appbarIcons"
                   style={{ fontSize: "18px" }}
                 />
               </div>
-              <div className="alignment">
+              <div className="toolBar1">
                 <ContactPhoneIcon
                   className="appbarIcons"
                   style={{ fontSize: "18px" }}
                 />
               </div>
-              <div className="alignment">
+              <div className="toolBar1">
                 <div className="notificationrotate">
                   <div className="notify">
                     <span className="heartbit"></span>
@@ -141,7 +139,7 @@ function ResponsiveDrawer(props) {
                   />
                 </div>
               </div>
-              <div className="alignment">
+              <div className="toolBar1">
                 <div className="notificationrotate">
                   <div className="notify">
                     <span className="heartbit"></span>
@@ -154,7 +152,7 @@ function ResponsiveDrawer(props) {
                 </div>
               </div>
 
-              <div className="alignment2">
+              <div className="toolBar2">
                 <div className="search">
                   <input
                     placeholder="Search..."
@@ -165,24 +163,25 @@ function ResponsiveDrawer(props) {
                       border: "none",
                     }}
                   />
+                  <div className="toolBar4">
+                    <SearchIcon
+                      className="blackColor"
+                      style={{ fontSize: "18px" }}
+                    />
+                  </div>
                 </div>
-                <div className="alignment3">
-                  <SearchIcon
-                    className="blackColor"
-                    style={{ fontSize: "18px" }}
-                  />
-                </div>
+
                 <div></div>
               </div>
             </div>
             <div className="row1">
-              <div className="alignment">
+              <div className="toolBar1">
                 <PowerSettingsNewIcon
                   className="appbarIcons"
                   style={{ fontSize: "18px" }}
                 />
               </div>
-              <div className="alignmentrotate">
+              <div className="settingsRotate">
                 <SettingsIcon
                   className="appbarIcons"
                   style={{ fontSize: "18px" }}
@@ -211,7 +210,7 @@ function ResponsiveDrawer(props) {
           <DrawerContent screenChanging={screenChanging} />
         </Drawer>
       </Hidden>
-      <Hidden smDown implementation="css">
+      <Hidden mdDown implementation="css">
         <Drawer
           className={classes.drawer}
           classes={{
@@ -226,24 +225,24 @@ function ResponsiveDrawer(props) {
       </Hidden>
 
       <main className={classes.content}>
-        <div className="rowP">
-          <div className="productSizeP">
-            <div className="productNameP">
-              <div className="productColorP">{choice}</div>
-              <small className="productWelcomeP">Welcome to Oreo</small>
+        <div className="rowProduct">
+          <div className="productSizePro">
+            <div className="productNamePro">
+              <div className="productColorPro">{choice}</div>
+              <small className="productWelcomePro">Welcome to Oreo</small>
             </div>
-            <div className="pathP">
-              <div className="homeIcon1P">
+            <div className="pathProduct">
+              <div className="homeIcon1Product">
                 <div>
                   <HomeIcon
-                    className="iconHomeColorP"
+                    className="iconHomeColorProduct"
                     style={{ fontSize: "18px" }}
                   />
                 </div>
-                <div className="oreo1">
-                  <div className="wordStyle1">Oreo</div>
+                <div className="oreoNew">
+                  <div className="wordStyles">Oreo</div>
                   <div className="wordStyle">/</div>
-                  <div className="wordStyle1">eCommerce</div>
+                  <div className="wordStyles">eCommerce</div>
                   <div className="wordStyle">/</div>
                   <div className="wordStyle">{choice}</div>
                 </div>
@@ -258,10 +257,12 @@ function ResponsiveDrawer(props) {
           <Product />
         ) : choice === "Product Details" ? (
           <ProductDetails />
+        ) : choice === "Dashboard" ? (
+          <DashboardEcomm />
         ) : null}
       </main>
     </div>
   );
 }
 
-export default ResponsiveDrawer;
+export default withRouter(ResponsiveDrawer);

@@ -1,41 +1,49 @@
-.row2 {
+@mixin displayRow {
   display: flex;
-  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@mixin display_FlexCenter {
+  display: flex;
+  align-items: center;
+}
+@mixin display_Flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.rootClass {
+  display: flex;
+}
+.row2 {
+  @include displayRow();
+  width: 100%;
   justify-content: space-between;
 }
 .row1 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  @include displayRow();
 }
 .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  @include displayRow();
 }
-.alignment {
-  display: flex;
-  align-items: center;
+.toolBar1 {
+  @include display_FlexCenter();
   margin-left: 25px;
 }
-.alignment1 {
-  display: flex;
-  align-items: center;
+.toolBar2 {
+  @include display_FlexCenter();
   margin-left: 35px;
 }
-.alignment2 {
-  display: flex;
-  align-items: center;
+.toolBar3 {
+  @include display_FlexCenter();
   margin-left: 35px;
   background-color: white;
   border: 1px solid white;
   border-radius: 30px;
 }
-.alignment3 {
-  display: flex;
-  align-items: center;
+.toolBar4 {
+  @include display_FlexCenter();
   padding: 10px;
 }
 .inputsearch {
@@ -57,9 +65,8 @@
   font-size: small;
   size: small;
 }
-.alignmentrotate {
-  display: flex;
-  align-items: center;
+.settingsRotate {
+  @include display_FlexCenter();
   margin-left: 25px;
   animation: rotation 2s infinite linear;
 }
@@ -72,10 +79,9 @@
   }
 }
 .topdrawer {
-  display: flex;
+  @include display_FlexCenter();
   flex-direction: row;
   margin-top: -50px;
-  align-items: center;
   justify-content: space-around;
 }
 .iconColor {
@@ -97,10 +103,7 @@
   height: 46px;
 }
 .userIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  @include display_Flex();
 
   border-radius: 30px;
   padding: 5px;
@@ -277,8 +280,10 @@
   display: flex;
   flex-direction: row;
 }
-
-.rowP {
+.oreoName {
+  font-size: 18px;
+}
+.rowProduct {
   margin-top: 64px;
   display: flex;
   background-color: #8c99e0;
@@ -288,28 +293,28 @@
   width: 100%;
   flex-wrap: wrap;
 }
-.productSizeP {
+.productSizePro {
   height: 67px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
-.productColorP {
+.productColorPro {
   font-size: 20px;
   color: white;
   font-family: "Montserrat", Arial, Tahoma, sans-serif;
 }
-.productWelcomeP {
+.productWelcomePro {
   font-size: 13px;
   color: white;
   font-family: "Montserrat", Arial, Tahoma, sans-serif;
 }
-.pathP {
+.pathProduct {
   display: flex;
   justify-content: flex-end;
 }
-.homeIcon1P {
+.homeIcon1Product {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,14 +327,15 @@
   height: 46px;
   margin-left: 12px;
 }
-.oreo1 {
+.oreoNew {
   // font-family: "Montserrat",sans-serif;
   color: white;
   width: 100%;
   display: flex;
   flex-direction: row;
+  font-size: 18px;
 }
-.iconHomeColorP {
+.iconHomeColorProduct {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,9 +344,41 @@
 }
 .wordStyle {
   color: #888;
-
   font-family: "Montserrat", Arial, Tahoma, sans-serif;
-}
-.wordStyle1 {
   font-size: 13px;
+}
+.wordStyles {
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 588px) {
+  .rootToolbar {
+    display: list-item;
+    position: relative;
+    align-items: center;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -37px;
+    margin-left: 30px;
+  }
+  .oreoName {
+    display: none;
+    font-size: 18px;
+  }
+  .MuiToolbar-root.MuiToolbar-regular.rootToolbar.MuiToolbar-gutters {
+    display: list-item;
+  }
+  .rootClass {
+    display: list-item;
+  }
+  .notify .point {
+    display: none;
+  }
+  .notify .heartbit {
+    display: none;
+  }
 }
