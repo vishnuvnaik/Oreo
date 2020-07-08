@@ -1,7 +1,7 @@
 import { USER_SHOW, HOME_SHOW } from "../constants/actionTypes";
 const initialstate = {
   drawershow: true,
-  drawerslide: false,
+  drawerslide: true,
 };
 export default (state = { drawershow: true, drawerslide: false }, action) => {
   switch (action.type) {
