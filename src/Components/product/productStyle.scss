@@ -98,14 +98,14 @@
 //   font-size: medium;
 // }
 
-@media only screen and (max-width: 600px) {
+@media all and (max-width: 588px) {
   .productCards {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .productCard {
     width: 309px;
     height: 309px;
-    background-color: slateblue;
+    margin: 10px;
   }
   #productWelcomeMsg {
     display: none;
@@ -119,5 +119,4 @@
     margin-left: 2px;
     font-size: medium;
   }
-
 }

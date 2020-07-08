@@ -16,19 +16,44 @@
     "DetailsList": [
         {
             "id": 1,
-            "img": "../../Assets/cycle.png",
+            "img": "../../Assets/clock.png",
             "title": " Simple Black Clock",
-            "price": "$290",
-            "rating": 5,
+            "price": "$310",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         },
         {
             "id": 2,
             "img": "../../Assets/bag.png",
             "title": "Flower Plot",
-            "price": "$180",
-            "rating": 2,
+            "price": "$150",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry, galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "id": 3,
+            "img": "../../Assets/cycle.png",
+            "title": "Pillow",
+            "price": "$130",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        }
+    ],
+    "profileDetails": [
+        {
+            "id": 1,
+            "img": "../../Assets/bag.png",
+            "Name": "Hossien",
+            "Item": "IPHONE-7",
+            "rating": 4,
+            "Reply": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante",
+            "Date": "Dec 21,2019"
+        },
+        {
+            "id": 2,
+            "img": "../../Assets/bag.png",
+            "Name": "Frank",
+            "Item": "NOKIA-456",
+            "rating": 4,
+            "Reply": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante s",
+            "Date": "Dec 21,2019"
         }
     ]
 }
