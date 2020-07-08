@@ -36,11 +36,18 @@ class DrawerContent extends React.Component {
       choice: "",
       // drawershow: true,
       //drawerslide: false,
+      open: false,
+      openDash: false,
     };
     this.homeButton = () => this.props.showHome();
     this.userButton = () => this.props.showUser();
   }
-
+  expansed = () => {
+    this.setState({ open: !this.state.open });
+  };
+  expansedDash = () => {
+    this.setState({ openDash: !this.state.openDash });
+  };
   screenChanging = (text) => {
     this.setState({ choice: text });
     this.props.screenChanging(text);
@@ -76,7 +83,33 @@ class DrawerContent extends React.Component {
                       className="cartIcon"
                       style={{ fontSize: "20px", paddingRight: "3px" }}
                     />
-                    <div className="ecommerceheader">Ecommerce</div>
+                    <div
+                      className="ecommerceheader"
+                      onClick={() => this.expansedDash()}
+                    >
+                      Dashboard
+                    </div>
+                  </div>
+                  <div onClick={() => this.expansedDash()}>
+                    <NavigateNextIcon
+                      className="cartIcon"
+                      style={{ fontSize: "20px", marginTop: "10px" }}
+                    />
+                  </div>
+                </div>
+                <div className="expansion">
+                  <div className="expansion">
+                    <ShoppingCartIcon
+                      className="cartIcon"
+                      style={{ fontSize: "20px", paddingRight: "3px" }}
+                    />
+                    <div
+                      className="ecommerceheader"
+                      onClick={() => this.expansed()}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Ecommerce
+                    </div>
                   </div>
                   <div onClick={() => this.expansed()}>
                     <NavigateNextIcon
@@ -86,50 +119,52 @@ class DrawerContent extends React.Component {
                   </div>
                 </div>
 
-                <div>
+                {this.state.open ? (
                   <div>
-                    <div
-                      className="expansion1"
-                      onClick={() => this.screenChanging("Dashboard")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Dashboard</div>
-                    </div>
-                    <div
-                      className="expansion1"
-                      onClick={() => this.screenChanging("Product")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Product</div>
-                    </div>
-                    <div
-                      className="expansion1"
-                      onClick={() => this.screenChanging("Product List")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Product List</div>
-                    </div>
-                    <div
-                      className="expansion1"
-                      onClick={() => this.screenChanging("Product Details")}
-                    >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
-                      <div className="ecommerce1">Product Details</div>
+                    <div>
+                      <div
+                        className="expansion1"
+                        onClick={() => this.screenChanging("Dashboard")}
+                      >
+                        <ArrowRightAltIcon
+                          className="cartIcon"
+                          style={{ fontSize: "22px", paddingRight: "3px" }}
+                        />
+                        <div className="ecommerce1">Dashboard</div>
+                      </div>
+                      <div
+                        className="expansion1"
+                        onClick={() => this.screenChanging("Product")}
+                      >
+                        <ArrowRightAltIcon
+                          className="cartIcon"
+                          style={{ fontSize: "22px", paddingRight: "3px" }}
+                        />
+                        <div className="ecommerce1">Product</div>
+                      </div>
+                      <div
+                        className="expansion1"
+                        onClick={() => this.screenChanging("Product List")}
+                      >
+                        <ArrowRightAltIcon
+                          className="cartIcon"
+                          style={{ fontSize: "22px", paddingRight: "3px" }}
+                        />
+                        <div className="ecommerce1">Product List</div>
+                      </div>
+                      <div
+                        className="expansion1"
+                        onClick={() => this.screenChanging("Product Details")}
+                      >
+                        <ArrowRightAltIcon
+                          className="cartIcon"
+                          style={{ fontSize: "22px", paddingRight: "3px" }}
+                        />
+                        <div className="ecommerce1">Product Details</div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ) : null}
               </div>
             </div>
           </div>
