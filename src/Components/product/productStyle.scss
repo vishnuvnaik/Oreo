@@ -40,7 +40,7 @@
   border-radius: 10px;
   background-color: rgb(243, 236, 236);
   padding: 15px;
-  margin: 5px;
+  margin: 15px;
   div {
     margin-top: 5px;
     font-family: "Montserrat", Arial, Tahoma, sans-serif;
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
   top: -65px;
 }

@@ -23,7 +23,7 @@ import Product from "../product/Product";
 import ProductList from "../productList/ProductList";
 import ProductDetails from "../productDetails/ProductDetails";
 import DrawerContent from "../drawerContent/DrawerContent";
-import DashboardEcomm from "../dashboardEcommerce/DashboardEcommerce";
+import DashboardEcomm from "../dashboardEcommerce/DashboardTab";
 
 const drawerWidth = 240;
 
@@ -67,7 +67,8 @@ function ResponsiveDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [choice, setChoice] = React.useState("Product");
+  const [choice, setChoice] = React.useState("Dashboard");
+  // const [spinner, setSpinner] = React.useState(true);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -254,7 +255,7 @@ function ResponsiveDrawer(props) {
         {choice === "Product List" ? (
           <ProductList />
         ) : choice === "Product" ? (
-          <Product />
+          <Product screenChanging={screenChanging} />
         ) : choice === "Product Details" ? (
           <ProductDetails />
         ) : choice === "Dashboard" ? (

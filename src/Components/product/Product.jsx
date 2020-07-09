@@ -10,17 +10,30 @@ class Product extends Component {
     super(props);
     this.state = {
       imageOver: false,
+      choice: "",
     };
     this.handleMouseOver = this.handleMouseOver.bind(this);
   }
   handleMouseOver() {
     this.setState({ imageOver: true });
   }
+  handleMouseClick = () => {
+    this.props.history.push("/productDetails");
+  };
+  screenChanging = (text) => {
+    this.setState({ choice: text });
+    this.props.screenChanging(text);
+    this.props.history.push("/productDetails");
+  };
   render() {
     let productCard = productData.map((product) => {
       return (
         <div className="productCard" key={product.id}>
-          <img src={product.img} width="100%" />
+          <img
+            src={product.img}
+            width="100%"
+            onClick={() => this.screenChanging("Product Details")}
+          />
           <div className="productData flexColumn">
             <div className="productName" variant="body1">
               {product.productName}

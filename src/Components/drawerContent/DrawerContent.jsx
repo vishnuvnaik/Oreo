@@ -11,6 +11,8 @@ import "./DrawerContent.scss";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import Home from "@material-ui/icons/Home";
+import Apps from "@material-ui/icons/Apps";
 const mapStateToProps = (state) => {
   return {
     drawershow: state.drawershow,
@@ -51,6 +53,7 @@ class DrawerContent extends React.Component {
   screenChanging = (text) => {
     this.setState({ choice: text });
     this.props.screenChanging(text);
+    // this.props.history.push("/" + this.state.choice);
   };
   render() {
     return (
@@ -79,7 +82,7 @@ class DrawerContent extends React.Component {
               <div>
                 <div className="expansion">
                   <div className="expansion">
-                    <ShoppingCartIcon
+                    <Home
                       className="cartIcon"
                       style={{ fontSize: "20px", paddingRight: "3px" }}
                     />
@@ -91,6 +94,27 @@ class DrawerContent extends React.Component {
                     </div>
                   </div>
                   <div onClick={() => this.expansedDash()}>
+                    <NavigateNextIcon
+                      className="cartIcon"
+                      style={{ fontSize: "20px", marginTop: "10px" }}
+                    />
+                  </div>
+                </div>
+                <div className="expansion">
+                  <div className="expansion">
+                    <Apps
+                      className="cartIcon"
+                      style={{ fontSize: "20px", paddingRight: "3px" }}
+                    />
+                    <div
+                      className="ecommerceheader"
+                      onClick={() => this.expansedApp()}
+                      style={{ cursor: "pointer" }}
+                    >
+                      App
+                    </div>
+                  </div>
+                  <div onClick={() => this.expansedApp()}>
                     <NavigateNextIcon
                       className="cartIcon"
                       style={{ fontSize: "20px", marginTop: "10px" }}

@@ -33,13 +33,81 @@
       span {
         font-size: 14px;
         font-weight: 300;
-        color: grey;
+        color: black;
+        font-family: "Montserrat", Arial, Tahoma, sans-serif;
       }
       h1 {
         font-weight: 400;
         font-size: 24px;
-        color: gray;
+        color: black;
+        font-family: "Montserrat", Arial, Tahoma, sans-serif;
       }
     }
   }
+}
+.chartContainer {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  .textInchart {
+    margin-left: 22px;
+    color: rgb(59, 58, 58);
+    margin-top: 25px;
+    h2 {
+      font-weight: 400;
+    }
+    span {
+      font-size: 15px;
+      font-weight: 300;
+      font-family: "Montserrat", Arial, Tahoma, sans-serif;
+    }
+  }
+}
+
+.annual-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.donut {
+  h2 {
+    text-align: center;
+    color: darkgrey;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 28px;
+  }
+  h6 {
+    text-align: center;
+  }
+  h5 {
+    text-align: center;
+    color: darkgrey;
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  span {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    font-size: 16px;
+  }
+  span {
+    text-align: center;
+    display: block;
+    //margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+.noteContrary {
+  display: flex;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Montserrat", Arial, Tahoma, sans-serif;
+  color: #6572b8;
+  position: relative;
+  margin-left: 20px;
 }
