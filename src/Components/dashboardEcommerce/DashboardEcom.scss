@@ -1,0 +1,45 @@
+.chartJs {
+  display: flex;
+  box-sizing: inherit;
+  background-color: white;
+}
+.barHeight {
+  height: 130px;
+}
+.report {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+  &-div {
+    display: flex;
+    flex-direction: row;
+    i {
+      padding: 12px 17px;
+      background-color: lightgray;
+      border-radius: 5px;
+      display: block;
+      width: fit-content;
+      align-self: center;
+      color: grey;
+      svg {
+        font-size: 18px;
+      }
+    }
+    div {
+      margin-top: 5px;
+      margin-left: 15px;
+      span {
+        font-size: 14px;
+        font-weight: 300;
+        color: grey;
+      }
+      h1 {
+        font-weight: 400;
+        font-size: 24px;
+        color: gray;
+      }
+    }
+  }
+}
