@@ -1,5 +1,5 @@
 import React from "react";
-import ProductLayout from "./ProductLayout";
+import ProductLayout from "./productLayout/ProductLayout";
 import { Line } from "react-chartjs-2";
 import "./DashboardEcom.scss";
 
@@ -88,21 +88,36 @@ const DashboardChart2 = () => {
           <h2>47,012</h2>
           <span>23% Average</span>
         </div>
-        <Line height="80px" data={data} legend={legend} options={options} />
+        <Line
+          className="heightChart"
+          data={data}
+          legend={legend}
+          options={options}
+        />
       </ProductLayout>
       <ProductLayout name="Total" secndName="Received" width="32%" close>
         <div className="textInchart">
           <h2>512</h2>
           <span>18% Average</span>
         </div>
-        <Line height="80px" data={data1} legend={legend} options={options} />
+        <Line
+          className="heightChart"
+          data={data1}
+          legend={legend}
+          options={options}
+        />
       </ProductLayout>
       <ProductLayout name="Revenue" width="32%" close>
         <div className="textInchart">
           <h2>1,612</h2>
           <span>13% Average</span>
         </div>
-        <Line height="80px" data={data2} legend={legend} options={options} />
+        <Line
+          className="heightChart"
+          data={data2}
+          legend={legend}
+          options={options}
+        />
       </ProductLayout>
     </div>
   );

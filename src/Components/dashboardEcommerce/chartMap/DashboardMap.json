@@ -1,0 +1,78 @@
+{
+    "MapDetails": [
+        {
+            "id": 1,
+            "contrary": "USA",
+            "year1": "2,009",
+            "year2": "3,904",
+            "change": "7.01%",
+            "upDown": "TrendingUp"
+        },
+        {
+            "id": 2,
+            "contrary": "USA",
+            "year1": "3,009",
+            "year2": "3,904",
+            "change": "7.01%",
+            "upDown": "TrendingUp"
+        },
+        {
+            "id": 3,
+            "contrary": "USA",
+            "year1": "4,009",
+            "year2": "3,904",
+            "change": "7.01%",
+            "upDown": "TrendingUp"
+        },
+        {
+            "id": 4,
+            "contrary": "USA",
+            "year1": "2,009",
+            "year2": "3,904",
+            "change": "7.01%",
+            "upDown": "TrendingUp"
+        },
+        {
+            "id": 5,
+            "contrary": "USA",
+            "year1": "2,009",
+            "year2": "3,904",
+            "change": "7.01%",
+            "upDown": "TrendingUp"
+        },
+        {
+            "id": 6,
+            "contrary": "USA",
+            "year1": "2,009",
+            "year2": "3,904",
+            "change": "7.01%",
+            "upDown": "TrendingUp"
+        }
+    ],
+    "PhoneDetails": [
+        {
+            "id": 1,
+            "Name": "Hossien",
+            "Item": "IPHONE-7",
+            "Address": "Porterfield 508 Virginia Street Chicago, IL 60653",
+            "Quality": "3",
+            "Status": "DONE"
+        },
+        {
+            "id": 2,
+            "Name": "Camara",
+            "Item": "NOKIA-8",
+            "Address": "1516 Holt Street West Palm Beach, FL 33401",
+            "Quality": "4",
+            "Status": "PENDING"
+        },
+        {
+            "id": 3,
+            "Name": "Maryam",
+            "Item": "NOKIA-456",
+            "Address": "2595 Pearlman Avenue Sudbury, MA 01776",
+            "Quality": "5",
+            "Status": "DELIVERED"
+        }
+    ]
+}

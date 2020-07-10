@@ -1,5 +1,5 @@
 import React from "react";
-import ProductLayout from "./ProductLayout";
+import ProductLayout from "./productLayout/ProductLayout";
 import { Line, Doughnut } from "react-chartjs-2";
 import "./DashboardEcom.scss";
 import TrendingUp from "@material-ui/icons/TrendingUp";
@@ -31,14 +31,14 @@ const ProductAnnualAndTotal = () => {
     labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017"],
     datasets: [
       {
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [10, 40, 80, 81, 56, 55, 40],
       },
       {
-        data: [28, 48, 40, 19, 86, 27, 90],
+        data: [15, 48, 40, 19, 86, 27, 45],
         backgroundColor: "rgba(255, 192, 203,0.9)",
       },
       {
-        data: [18, 41, 30, 59, 76, 57, 95],
+        data: [11, 41, 30, 43, 60, 57, 55],
         backgroundColor: "rgba(255,213,154,0.9)",
       },
     ],
@@ -64,7 +64,7 @@ const ProductAnnualAndTotal = () => {
       ],
       yAxes: [
         {
-          gridLines: {},
+          gridLines: { display: true },
         },
       ],
     },
@@ -85,7 +85,7 @@ const ProductAnnualAndTotal = () => {
   const legend = {
     display: false,
   };
-  const donutOptions = {
+  const doughnutOptions = {
     cutoutPercentage: 85,
     title: {
       display: false,
@@ -98,7 +98,7 @@ const ProductAnnualAndTotal = () => {
       },
     },
   };
-  const donutData = {
+  const doughNutData = {
     labels: ["", "", "", "", "", "", "", "", ""],
     datasets: [
       {
@@ -122,7 +122,11 @@ const ProductAnnualAndTotal = () => {
         <div className="donut">
           <h2>Total Sale</h2>
           <h6>2,45,124</h6>
-          <Doughnut legend={legend} data={donutData} options={donutOptions} />
+          <Doughnut
+            legend={legend}
+            data={doughNutData}
+            options={doughnutOptions}
+          />
           <h5>SATISFICATION RATE</h5>
           <span>
             47% Average <TrendingUp />

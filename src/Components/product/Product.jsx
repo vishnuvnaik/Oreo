@@ -12,10 +12,6 @@ class Product extends Component {
       imageOver: false,
       choice: "",
     };
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-  }
-  handleMouseOver() {
-    this.setState({ imageOver: true });
   }
   handleMouseClick = () => {
     this.props.history.push("/productDetails");
@@ -41,11 +37,7 @@ class Product extends Component {
             <div variant="body2">
               <div className="flexRow productCostRow">
                 <div>{product.price}</div>
-                <div
-                  style={{ color: "red", padding: "10px", paddingTop: "8px" }}
-                >
-                  {product.discount}
-                </div>
+                <div className="redFont">{product.discount}</div>
               </div>
             </div>
           </div>

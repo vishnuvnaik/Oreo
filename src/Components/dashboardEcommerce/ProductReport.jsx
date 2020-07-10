@@ -1,6 +1,6 @@
 import React from "react";
 import { DataUsage, Assessment, LocalAtm } from "@material-ui/icons";
-import ProductLayout from "./ProductLayout";
+import ProductLayout from "./productLayout/ProductLayout";
 import { Bar } from "react-chartjs-2";
 import "./DashboardEcom.scss";
 

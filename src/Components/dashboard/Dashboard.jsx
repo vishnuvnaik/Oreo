@@ -23,7 +23,7 @@ import Product from "../product/Product";
 import ProductList from "../productList/ProductList";
 import ProductDetails from "../productDetails/ProductDetails";
 import DrawerContent from "../drawerContent/DrawerContent";
-import DashboardEcomm from "../dashboardEcommerce/DashboardTab";
+import DashboardEcomm from "../dashboardEcommerce/dashboardTab/DashboardTab";
 
 const drawerWidth = 240;
 
