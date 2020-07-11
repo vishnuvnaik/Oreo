@@ -1,18 +1,26 @@
-import {
-  DESCRIPTION,
-  REVIEW,
-  ABOUT,
-  CURRENT_PRODUCT,
-  ADD_PRODUCT,
-} from "../constants/actionTypes.js";
+import { USER_SHOW, HOME_SHOW } from "../constants/actionTypes";
 import products from "../Components/product/productDetail.json";
 const initialstate = {
+  drawershow: true,
+  drawerslide: true,
   displayCard: "description",
   currentProduct: products[0],
   productList: [],
 };
-export default (state = initialState, action) => {
+export default (state = initialstate, action) => {
   switch (action.type) {
+    case "USER_SHOW":
+      return {
+        ...state,
+        drawershow: false,
+        drawerslide: true,
+      };
+    case "HOME_SHOW":
+      return {
+        ...state,
+        drawershow: true,
+        drawerslide: true,
+      };
     case "DESCRIPTION":
       return {
         ...state,
@@ -40,7 +48,6 @@ export default (state = initialState, action) => {
         ...state,
         productList: [...state.productList, action.payload],
       };
-
     default:
       return state;
   }
