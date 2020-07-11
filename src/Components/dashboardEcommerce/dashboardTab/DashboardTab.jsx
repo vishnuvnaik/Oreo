@@ -3,6 +3,7 @@ import ProductReport from "../ProductReport";
 import DashboardChart2 from "../DashboardChart2";
 import AnnualReportChart from "../AnnualReportChart";
 import Chartmap from "../chartMap/Chartmap";
+import Customer from "../customerCards/CustomerProfile";
 import Recentorders from "../RecentOrders";
 import "./Dashboardtab.scss";
 const Dashboard = () => {
@@ -13,6 +14,7 @@ const Dashboard = () => {
       <AnnualReportChart />
       <Chartmap />
       <Recentorders />
+      <Customer />
     </div>
   );
 };

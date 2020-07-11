@@ -1,6 +1,6 @@
 import React from "react";
 import ProductLayout from "../productLayout/ProductLayout";
-import ReactMapGl, { NavigationControl, GeolocateControl } from "react-map-gl";
+import ReactMapGl from "react-map-gl";
 import mobiledata from "./DashboardMap.json";
 import "../../../../node_modules/mapbox-gl/dist/mapbox-gl.css";
 import "../DashboardEcom.scss";
@@ -14,7 +14,7 @@ const Chartmap = () => {
     zoom: 0.5,
   };
   return (
-    <div className="annual-container">
+    <div className="annualContainer">
       <ProductLayout name="Top" secndName="Selling Country" close>
         <div style={{ padding: "20px", height: "100%", width: "100%" }}>
           <ReactMapGl
@@ -35,6 +35,7 @@ const Chartmap = () => {
                       <th align="Left" className="tableHeading">
                         Contrary
                       </th>
+
                       <th align="Left" className="tableHeading">
                         2016
                       </th>

@@ -12,7 +12,7 @@ const Recentorders = () => {
     zoom: 0.5,
   };
   return (
-    <div className="annual-container">
+    <div className="annualContainer">
       <ProductLayout name="Recent" secndName="orders" close>
         <div style={{ padding: "20px", height: "100%", width: "100%" }}>
           <table>

@@ -86,6 +86,7 @@ const ProductAnnualAndTotal = () => {
     display: false,
   };
   const doughnutOptions = {
+    labels: ["", "", "", "", "", "", "", "", ""],
     cutoutPercentage: 85,
     title: {
       display: false,
@@ -110,7 +111,7 @@ const ProductAnnualAndTotal = () => {
     text: "66%",
   };
   return (
-    <div className="annual-container">
+    <div className="annualContainer">
       <ProductLayout name="Annual" surName="Report" width="65%">
         <div className="noteContrary">
           <strong color="black">Note:</strong> Contrary to popular belief, Lorem

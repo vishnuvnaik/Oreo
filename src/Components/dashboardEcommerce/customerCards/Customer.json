@@ -1,0 +1,31 @@
+{
+    "profileDetails": [
+        {
+            "id": 1,
+            "img": "../../Assets/avatar2.jpg",
+            "Name": "Hossien",
+            "Item": "IPHONE-7",
+            "rating": 5,
+            "Reply": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante",
+            "Date": "Dec 21,2019"
+        },
+        {
+            "id": 2,
+            "img": "../../Assets/avatar3.jpg",
+            "Name": "Tim Hank",
+            "Item": "NOKIA-456",
+            "rating": 4,
+            "Reply": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante s",
+            "Date": "Nov 2,2019"
+        },
+        {
+            "id": 3,
+            "img": "../../Assets/avatar4.jpg",
+            "Name": "MARYAM AMIRI",
+            "Item": "NOKIA-8",
+            "rating": 4,
+            "Reply": "There are many variations of passages of Lorem Ipsum available, but something is",
+            "Date": "feb 11,2019"
+        }
+    ]
+}
