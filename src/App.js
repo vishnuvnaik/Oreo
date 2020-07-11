@@ -16,7 +16,7 @@ class App extends Component {
           <Route
             path="/productDetails"
             exact={true}
-            component={ProductDetails}
+            component={(ProductDetails, Dashboard)}
           />
         </Switch>
       </Router>
