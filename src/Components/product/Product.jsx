@@ -3,19 +3,27 @@ import { withRouter } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import { Typography } from "@material-ui/core";
 import "./productStyle.scss";
+import { ShoppingCart, Add } from "@material-ui/icons";
+import { setCurrentProduct, addProduct } from "../../constants/action";
 import productData from "./productDetail.json";
-
+import { connect } from "react-redux";
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleClick: (id) => dispatch(setCurrentProduct(id)),
+    handleAdd: (product) => dispatch(addProduct(product)),
+  };
+};
 class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {
       imageOver: false,
       choice: "",
+      id: "",
     };
+    // this.handleAdd = (product) => this.props.handleAdd(product);
   }
-  handleMouseClick = () => {
-    this.props.history.push("/productDetails");
-  };
+
   screenChanging = (text) => {
     this.setState({ choice: text });
     this.props.screenChanging(text);
@@ -25,11 +33,33 @@ class Product extends Component {
     let productCard = productData.map((product) => {
       return (
         <div className="productCard" key={product.id}>
-          <img
-            src={product.img}
-            width="100%"
-            onClick={() => this.screenChanging("Product Details")}
-          />
+          <div className="imageItem">
+            <img
+              src={product.img}
+              width="100%"
+              onClick={() => {
+                this.screenChanging("Product Details");
+                this.props.handleClick(product.id);
+              }}
+            />
+            <div>
+              <button
+                onClick={() => {
+                  this.props.handleAdd(product);
+                }}
+              >
+                <i>
+                  <Add />
+                </i>
+              </button>
+              <button>
+                <i>
+                  <ShoppingCart />
+                </i>
+              </button>
+            </div>
+          </div>
+
           <div className="productData flexColumn">
             <div className="productName" variant="body1">
               {product.productName}
@@ -66,4 +96,4 @@ class Product extends Component {
     );
   }
 }
-export default withRouter(Product);
+export default connect(null, mapDispatchToProps)(withRouter(Product));

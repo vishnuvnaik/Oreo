@@ -4,55 +4,79 @@
     "productName": "Cycle",
     "price": "$16.00",
     "discount": "$12.00",
-    "img": "../../Assets/cycle.png"
+    "img": "../../Assets/cycle.png",
+    "details": "randomised words even slightly believable",
+    "stock": "In Stock",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
     "id": 2,
     "productName": "Flowervase",
     "price": "$12.00",
     "discount": "$11.00",
-    "img": "../../Assets/vase.png"
+    "img": "../../Assets/vase.png",
+    "details": "randomised words even slightly believable",
+    "stock": "In Stock",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
     "id": 3,
     "productName": "Bag",
     "price": "$33.00",
     "discount": "$27.00",
-    "img": "../../Assets/bag.png"
+    "img": "../../Assets/bag.png",
+    "details": "randomised words even slightly believable",
+    "stock": "In Stock",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
   },
   {
     "id": 4,
     "productName": "Headphone",
     "price": "$23.00",
     "discount": "$17.00",
-    "img": "../../Assets/headPhone.png"
+    "img": "../../Assets/headPhone.png",
+    "details": "randomised words even slightly believable",
+    "stock": "In Stock",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
   },
   {
     "id": 5,
     "productName": "Clock",
     "price": "$23.00",
     "discount": "$17.00",
-    "img": "../../Assets/clock.png"
+    "img": "../../Assets/clock.png",
+    "details": "randomised words even slightly believable",
+    "stock": "In Stock",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
   },
   {
     "id": 6,
     "productName": "Lamp",
     "price": "$23.00",
     "discount": "$17.00",
-    "img": "../../Assets/lamp.png"
+    "img": "../../Assets/lamp.png",
+    "stock": "In Stock",
+    "details": "randomised words even slightly believable",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
   },
   {
     "id": 7,
     "productName": "Pillow",
     "price": "$23.00",
     "discount": "$17.00",
-    "img": "../../Assets/pillow.png"
+    "img": "../../Assets/pillow.png",
+    "details": "randomised words even slightly believable",
+    "stock": "In Stock",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
   },
   {
     "id": 8,
     "productName": "Chair",
     "price": "$35.00",
     "discount": "$28.00",
-    "img": "../../Assets/woodChair.png"
+    "img": "../../Assets/woodChair.png",
+    "stock": "In Stock",
+    "details": "randomised words even slightly believable",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
   }
 ]

@@ -2,7 +2,6 @@ import { withRouter } from "react-router-dom";
 import React, { Component } from "react";
 import HomeIcon from "@material-ui/icons/Home";
 import "./productDetails.scss";
-
 import productdata from "./ProductDetail.json";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ReactStars from "react-rating-stars-component";
@@ -12,8 +11,10 @@ import { DESCRIPTION, ABOUT, REVIEW } from "../../constants/actionTypes";
 const mapStateToProps = (state) => {
   return {
     displayCard: state.displayCard,
+    currentProduct: state.currentProduct,
   };
 };
+
 const mapDispatchToProps = (dispatch) => {
   return {
     cardDescription: () =>
@@ -30,6 +31,7 @@ const mapDispatchToProps = (dispatch) => {
       }),
   };
 };
+
 class ProductDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -38,6 +40,8 @@ class ProductDetails extends React.Component {
       index: "0",
       id: "",
       listId: "",
+      currentProduct: this.props.currentProduct,
+      setCurrentProduct: this.props.currentProduct,
     };
     this.cardDescription = () => this.props.cardDescription();
     this.cardReview = () => this.props.cardReview();
@@ -73,7 +77,10 @@ class ProductDetails extends React.Component {
                   <div className="roworder">
                     <div className="columnWise">
                       <div>
-                        <img src={this.state.image} className="bigimg" />
+                        <img
+                          src={this.state.currentProduct.img}
+                          className="bigimg"
+                        />
                       </div>
                       <div className="mapDiv">
                         {productdata.Products.map((data, index) => (
