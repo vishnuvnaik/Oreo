@@ -1,18 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
 import { HOME_SHOW, USER_SHOW } from "../../constants/actionTypes";
-import HomeIcon from "@material-ui/icons/Home";
-import PersonIcon from "@material-ui/icons/Person";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import {
+  Home,
+  Person,
+  ShoppingCart,
+  ArrowRightAlt,
+  NavigateNext,
+  Facebook,
+  Twitter,
+  Instagram,
+  Apps,
+  ArrowDropDown,
+} from "@material-ui/icons";
+
 import { Typography, Divider } from "@material-ui/core";
 import "./DrawerContent.scss";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import Home from "@material-ui/icons/Home";
-import Apps from "@material-ui/icons/Apps";
+
 const mapStateToProps = (state) => {
   return {
     drawershow: state.drawershow,
@@ -61,13 +65,13 @@ class DrawerContent extends React.Component {
         <div className="topdrawerheader">
           <div className="homeIcon" onClick={() => this.homeButton()}>
             <div>
-              <HomeIcon className="iconColor" />
+              <Home className="iconColor" />
             </div>
             <div className="oreo">Oreo</div>
           </div>
           <div className="homeIcon" onClick={() => this.userButton()}>
             <div>
-              <PersonIcon className="iconColor" />
+              <Person className="iconColor" />
             </div>
             <div className="oreo">User</div>
           </div>
@@ -94,7 +98,7 @@ class DrawerContent extends React.Component {
                     </div>
                   </div>
                   <div onClick={() => this.expansedDash()}>
-                    <NavigateNextIcon
+                    <NavigateNext
                       className="cartIcon"
                       style={{ fontSize: "20px", marginTop: "10px" }}
                     />
@@ -115,15 +119,22 @@ class DrawerContent extends React.Component {
                     </div>
                   </div>
                   <div onClick={() => this.expansedApp()}>
-                    <NavigateNextIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", marginTop: "10px" }}
-                    />
+                    {this.state.open ? (
+                      <NavigateNext
+                        className="cartIcon"
+                        style={{ fontSize: "20px", marginTop: "10px" }}
+                      />
+                    ) : (
+                      <NavigateNext
+                        className="cartIcon"
+                        style={{ fontSize: "20px", marginTop: "10px" }}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="expansion">
                   <div className="expansion">
-                    <ShoppingCartIcon
+                    <ShoppingCart
                       className="cartIcon"
                       style={{ fontSize: "20px", paddingRight: "3px" }}
                     />
@@ -136,10 +147,17 @@ class DrawerContent extends React.Component {
                     </div>
                   </div>
                   <div onClick={() => this.expansed()}>
-                    <NavigateNextIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", marginTop: "10px" }}
-                    />
+                    {this.state.open ? (
+                      <ArrowDropDown
+                        className="cartIcon"
+                        style={{ fontSize: "20px", marginTop: "10px" }}
+                      />
+                    ) : (
+                      <NavigateNext
+                        className="cartIcon"
+                        style={{ fontSize: "20px", marginTop: "10px" }}
+                      />
+                    )}
                   </div>
                 </div>
 
@@ -150,7 +168,7 @@ class DrawerContent extends React.Component {
                         className="expansion1"
                         onClick={() => this.screenChanging("Dashboard")}
                       >
-                        <ArrowRightAltIcon
+                        <ArrowRightAlt
                           className="cartIcon"
                           style={{ fontSize: "22px", paddingRight: "3px" }}
                         />
@@ -160,7 +178,7 @@ class DrawerContent extends React.Component {
                         className="expansion1"
                         onClick={() => this.screenChanging("Product")}
                       >
-                        <ArrowRightAltIcon
+                        <ArrowRightAlt
                           className="cartIcon"
                           style={{ fontSize: "22px", paddingRight: "3px" }}
                         />
@@ -170,7 +188,7 @@ class DrawerContent extends React.Component {
                         className="expansion1"
                         onClick={() => this.screenChanging("Product List")}
                       >
-                        <ArrowRightAltIcon
+                        <ArrowRightAlt
                           className="cartIcon"
                           style={{ fontSize: "22px", paddingRight: "3px" }}
                         />
@@ -180,7 +198,7 @@ class DrawerContent extends React.Component {
                         className="expansion1"
                         onClick={() => this.screenChanging("Product Details")}
                       >
-                        <ArrowRightAltIcon
+                        <ArrowRightAlt
                           className="cartIcon"
                           style={{ fontSize: "22px", paddingRight: "3px" }}
                         />
@@ -205,9 +223,9 @@ class DrawerContent extends React.Component {
                 </div>
 
                 <div className="flexRow">
-                  <FacebookIcon />
-                  <TwitterIcon />
-                  <InstagramIcon />
+                  <Facebook />
+                  <Twitter />
+                  <Instagram />
                 </div>
 
                 <div>
