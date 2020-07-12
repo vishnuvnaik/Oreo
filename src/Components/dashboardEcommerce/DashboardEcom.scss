@@ -68,6 +68,22 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  h6 {
+    font-size: 15px;
+    font-family: "Montserrat", Arial, Tahoma, sans-serif;
+  }
+}
+.recentContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.tableRecent {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  border-spacing: 2px;
+  border-color: grey;
 }
 .donut {
   h2 {
@@ -86,20 +102,13 @@
     margin-top: 8px;
     font-size: 16px;
   }
+
   span {
     text-align: center;
     display: block;
-    margin-top: 10px;
     font-weight: 300;
     font-size: 14px;
-    font-size: 16px;
-  }
-  span {
-    text-align: center;
-    display: block;
-    //margin-top: 10px;
-    font-weight: 300;
-    font-size: 14px;
+    font-family: "Montserrat", Arial, Tahoma, sans-serif;
   }
 }
 .noteContrary {
@@ -207,6 +216,19 @@
     flex-direction: column;
     &-div {
       width: 160px;
+    }
+  }
+  .chartContainer {
+    flex-direction: column;
+    .container-style {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+  }
+  .annualContainer {
+    flex-direction: column;
+    .container-style {
+      width: 100% !important;
     }
   }
 }

@@ -67,7 +67,7 @@ function ResponsiveDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [choice, setChoice] = React.useState("Product");
+  const [choice, setChoice] = React.useState("Dashboard");
   // const [spinner, setSpinner] = React.useState(true);
 
   const handleDrawerToggle = () => {

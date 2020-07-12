@@ -12,10 +12,17 @@ const Recentorders = () => {
     zoom: 0.5,
   };
   return (
-    <div className="annualContainer">
+    <div className="recentContainer">
       <ProductLayout name="Recent" secndName="orders" close>
-        <div style={{ padding: "20px", height: "100%", width: "100%" }}>
-          <table>
+        <div
+          style={{
+            padding: "20px",
+            height: "100%",
+            width: "100%",
+            overflowX: "scroll",
+          }}
+        >
+          <table className="tableRecent">
             <thead>
               <tr>
                 <th align="Left" className="hashStyle">

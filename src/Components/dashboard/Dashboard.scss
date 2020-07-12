@@ -398,4 +398,14 @@
   .notify .heartbit {
     display: none;
   }
+  .rowProduct {
+    margin-top: 104px;
+    display: flex;
+    background-color: #8c99e0;
+    height: 150px;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
 }

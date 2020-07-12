@@ -57,7 +57,6 @@ class DrawerContent extends React.Component {
   screenChanging = (text) => {
     this.setState({ choice: text });
     this.props.screenChanging(text);
-    // this.props.history.push("/" + this.state.choice);
   };
   render() {
     return (

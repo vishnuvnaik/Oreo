@@ -1,10 +1,13 @@
 import React from "react";
 import ProductLayout from "../productLayout/ProductLayout";
-import ReactMapGl from "react-map-gl";
 import mobiledata from "./DashboardMap.json";
 import "../../../../node_modules/mapbox-gl/dist/mapbox-gl.css";
 import "../DashboardEcom.scss";
-
+import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+const Map = ReactMapboxGl({
+  accessToken:
+    "pk.eyJ1IjoidmlzaG51OTc5Nzk3IiwiYSI6ImNrY2cxejNqNDBud3MyeHBjamJybXRzNmsifQ.gSGWl4lQY4b5ePsn1Rcjew",
+});
 const Chartmap = () => {
   const viewport = {
     height: "400px",
@@ -17,11 +20,28 @@ const Chartmap = () => {
     <div className="annualContainer">
       <ProductLayout name="Top" secndName="Selling Country" close>
         <div style={{ padding: "20px", height: "100%", width: "100%" }}>
-          <ReactMapGl
-            {...viewport}
-            mapStyle="mapbox://styles/mapbox/light-v9"
-            mapboxApiAccessToken="pk.eyJ1IjoidmlzaG51OTc5Nzk3IiwiYSI6ImNrY2cxejNqNDBud3MyeHBjamJybXRzNmsifQ.gSGWl4lQY4b5ePsn1Rcjew"
-          />
+          <Map
+            style="mapbox://styles/mapbox/light-v10"
+            containerStyle={{
+              height: "500px",
+              width: "100%",
+            }}
+            zoom={[0, 5]}
+          >
+            <Layer
+              type="symbol"
+              id="marker"
+              layout={{
+                "icon-image": "marker-15",
+              }}
+            >
+              <Feature coordinates={[-90.712891, 37.09024]} />
+              <Feature coordinates={[70.962883, 20.593683]} />
+              <Feature coordinates={[-116.346771, 56.130367]} />
+              <Feature coordinates={[133.775131, -25.274399]} />
+              <Feature coordinates={[10.451526, 51.165691]} />
+            </Layer>
+          </Map>
         </div>
       </ProductLayout>
       <ProductLayout width="31.5%">
