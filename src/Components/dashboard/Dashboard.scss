@@ -23,11 +23,16 @@
 }
 .row1 {
   @include displayRow();
+  margin-left: 250px;
 }
 .row {
   @include displayRow();
 }
 .toolBar1 {
+  @include display_FlexCenter();
+  margin-left: 25px;
+}
+.oreoName1 {
   @include display_FlexCenter();
   margin-left: 25px;
 }
@@ -50,6 +55,8 @@
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
+
+  box-sizing: inherit;
 }
 .search {
   display: flex;
@@ -386,8 +393,19 @@
     display: none;
     font-size: 18px;
   }
+  .oreoName1 {
+    display: none;
+  }
   .MuiToolbar-root.MuiToolbar-regular.rootToolbar.MuiToolbar-gutters {
     display: list-item;
+    min-height: 96px;
+  }
+  .search {
+    display: none;
+  }
+  .row1 {
+    @include displayRow();
+    margin-left: 0;
   }
   .rootClass {
     display: list-item;
@@ -399,7 +417,7 @@
     display: none;
   }
   .rowProduct {
-    margin-top: 104px;
+    margin-top: 94px;
     display: flex;
     background-color: #8c99e0;
     height: 150px;

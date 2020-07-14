@@ -3,6 +3,8 @@ import { withRouter } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
+import { connect } from "react-redux";
+import { search } from "../../constants/action";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import MailIcon from "@material-ui/icons/Mail";
@@ -36,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     display: "inline-block",
+    postion: "sticky",
     backgroundColor: "#8c99e0",
     [theme.breakpoints.up("lg")]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -98,7 +101,7 @@ function ResponsiveDrawer(props) {
           <div className="row2">
             <div className="row">
               <img src="../../Assets/oreoLogo.svg" width="30px" />
-              <div className="toolBar1">
+              <div className="oreoName1">
                 <div className="oreoName">OREO</div>
               </div>
 
@@ -157,36 +160,35 @@ function ResponsiveDrawer(props) {
                 <div className="search">
                   <input
                     placeholder="Search..."
-                    className="inputsearch"
                     style={{
                       disableUnderline: true,
                       outline: "none",
                       border: "none",
                     }}
+                    value={props.search}
+                    onChange={(e) => {
+                      props.handleSearch(e.target.value);
+                    }}
                   />
-                  <div className="toolBar4">
-                    <SearchIcon
-                      className="blackColor"
-                      style={{ fontSize: "18px" }}
-                    />
-                  </div>
                 </div>
-
-                <div></div>
-              </div>
-            </div>
-            <div className="row1">
-              <div className="toolBar1">
-                <PowerSettingsNewIcon
-                  className="appbarIcons"
+                <SearchIcon
+                  className="blackColor"
                   style={{ fontSize: "18px" }}
                 />
               </div>
-              <div className="settingsRotate">
-                <SettingsIcon
-                  className="appbarIcons"
-                  style={{ fontSize: "18px" }}
-                />
+              <div className="row1">
+                <div className="toolBar1">
+                  <PowerSettingsNewIcon
+                    className="appbarIcons"
+                    style={{ fontSize: "18px" }}
+                  />
+                </div>
+                <div className="settingsRotate">
+                  <SettingsIcon
+                    className="appbarIcons"
+                    style={{ fontSize: "18px" }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -265,5 +267,19 @@ function ResponsiveDrawer(props) {
     </div>
   );
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleSearch: (value) => dispatch(search(value)),
+  };
+};
 
-export default withRouter(ResponsiveDrawer);
+const mapStateToProps = (state) => {
+  return {
+    search: state.search,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(ResponsiveDrawer));

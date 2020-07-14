@@ -3,16 +3,24 @@ import { withRouter } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import { Typography } from "@material-ui/core";
 import "./productStyle.scss";
-import { ShoppingCart, Add } from "@material-ui/icons";
+import { ShoppingCart, Add, Style } from "@material-ui/icons";
 import { setCurrentProduct, addProduct } from "../../constants/action";
 import productData from "./productDetail.json";
 import { connect } from "react-redux";
 const mapDispatchToProps = (dispatch) => {
   return {
     handleClick: (id) => dispatch(setCurrentProduct(id)),
-    handleAdd: (product) => dispatch(addProduct(product)),
+    handleAdd: (product) => {
+      dispatch(addProduct(product));
+    },
   };
 };
+const mapStateToProps = (state) => {
+  return {
+    search: state.search,
+  };
+};
+
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +38,13 @@ class Product extends Component {
     this.props.history.push("/productDetails");
   };
   render() {
-    let productCard = productData.map((product) => {
+    let products = productData;
+    if (this.props.search !== "") {
+      products = productData.filter((el) =>
+        el.productName.toLowerCase().startsWith(this.props.search.toLowerCase())
+      );
+    }
+    let productCard = products.map((product) => {
       return (
         <div className="productCard" key={product.id}>
           <div className="imageItem">
@@ -85,7 +99,9 @@ class Product extends Component {
             <div>
               <div className="contentRoute">
                 <HomeIcon />
-                <div>Oreo / eCommerce / Product</div>
+                <div>
+                  Oreo / eCommerce / <i style={{ color: "black" }}>Product</i>
+                </div>
               </div>
             </div>
           </div>
@@ -96,4 +112,7 @@ class Product extends Component {
     );
   }
 }
-export default connect(null, mapDispatchToProps)(withRouter(Product));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(Product));

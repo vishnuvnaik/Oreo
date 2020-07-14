@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { HOME_SHOW, USER_SHOW } from "../../constants/actionTypes";
+import { NavLink } from "react-router-dom";
 import {
   Home,
   Person,
@@ -163,46 +164,66 @@ class DrawerContent extends React.Component {
                 {this.state.open ? (
                   <div>
                     <div>
-                      <div
-                        className="expansion1"
-                        onClick={() => this.screenChanging("Dashboard")}
+                      <NavLink
+                        to={"/Dashboard"}
+                        style={{ textDecoration: "none" }}
                       >
-                        <ArrowRightAlt
-                          className="cartIcon"
-                          style={{ fontSize: "22px", paddingRight: "3px" }}
-                        />
-                        <div className="ecommerce1">Dashboard</div>
-                      </div>
-                      <div
-                        className="expansion1"
-                        onClick={() => this.screenChanging("Product")}
+                        <div
+                          className="expansion1"
+                          onClick={() => this.screenChanging("Dashboard")}
+                        >
+                          <ArrowRightAlt
+                            className="cartIcon"
+                            style={{ fontSize: "22px", paddingRight: "3px" }}
+                          />
+                          <div className="ecommerce1">Dashboard</div>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        to={"/Product"}
+                        style={{ textDecoration: "none" }}
                       >
-                        <ArrowRightAlt
-                          className="cartIcon"
-                          style={{ fontSize: "22px", paddingRight: "3px" }}
-                        />
-                        <div className="ecommerce1">Product</div>
-                      </div>
-                      <div
-                        className="expansion1"
-                        onClick={() => this.screenChanging("Product List")}
+                        <div
+                          className="expansion1"
+                          onClick={() => this.screenChanging("Product")}
+                        >
+                          <ArrowRightAlt
+                            className="cartIcon"
+                            style={{ fontSize: "22px", paddingRight: "3px" }}
+                          />
+                          <div className="ecommerce1">Product</div>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        to={"/Productlist"}
+                        style={{ textDecoration: "none" }}
                       >
-                        <ArrowRightAlt
-                          className="cartIcon"
-                          style={{ fontSize: "22px", paddingRight: "3px" }}
-                        />
-                        <div className="ecommerce1">Product List</div>
-                      </div>
-                      <div
-                        className="expansion1"
-                        onClick={() => this.screenChanging("Product Details")}
+                        <div
+                          className="expansion1"
+                          onClick={() => this.screenChanging("Product List")}
+                        >
+                          <ArrowRightAlt
+                            className="cartIcon"
+                            style={{ fontSize: "22px", paddingRight: "3px" }}
+                          />
+                          <div className="ecommerce1">Product List</div>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        to={"/Productdetails"}
+                        style={{ textDecoration: "none" }}
                       >
-                        <ArrowRightAlt
-                          className="cartIcon"
-                          style={{ fontSize: "22px", paddingRight: "3px" }}
-                        />
-                        <div className="ecommerce1">Product Details</div>
-                      </div>
+                        <div
+                          className="expansion1"
+                          onClick={() => this.screenChanging("Product Details")}
+                        >
+                          <ArrowRightAlt
+                            className="cartIcon"
+                            style={{ fontSize: "22px", paddingRight: "3px" }}
+                          />
+                          <div className="ecommerce1">Product Details</div>
+                        </div>
+                      </NavLink>
                     </div>
                   </div>
                 ) : null}
