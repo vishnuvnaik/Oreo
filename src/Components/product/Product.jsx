@@ -88,28 +88,7 @@ class Product extends Component {
         </div>
       );
     });
-    return (
-      <div className="containerMain">
-        <div>
-          <div className="contentsNav">
-            <div id="productWelcomeMsg">
-              <div className="prodFont">Product</div>
-              <div className="welcomeFont">Welcome to Oreo</div>
-            </div>
-            <div>
-              <div className="contentRoute">
-                <HomeIcon />
-                <div>
-                  Oreo / eCommerce / <i style={{ color: "black" }}>Product</i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="productCards">{productCard}</div>
-        </div>
-      </div>
-    );
+    return <div className="productCards">{productCard}</div>;
   }
 }
 export default connect(
