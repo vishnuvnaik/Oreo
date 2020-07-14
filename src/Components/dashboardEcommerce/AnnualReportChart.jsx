@@ -44,7 +44,8 @@ const ProductAnnualAndTotal = () => {
     ],
   };
   const options = {
-    labels: ["", "", "", "", "", "", "", "", ""],
+    labels: ["   "],
+
     elements: {
       arc: {
         borderWidth: 0,
@@ -100,7 +101,8 @@ const ProductAnnualAndTotal = () => {
     },
   };
   const doughNutData = {
-    labels: ["", "", "", "", "", "", "", "", ""],
+    labels: ["   "],
+
     datasets: [
       {
         data: [61, 39],
@@ -117,6 +119,7 @@ const ProductAnnualAndTotal = () => {
           <strong color="black">Note:</strong> Contrary to popular belief, Lorem
           Ipsum is not simply random text.
         </div>
+
         <Line data={data} options={options} legend={legend} />
       </ProductLayout>
       <ProductLayout name="Total" surName="Revenue" width="31.5%">
