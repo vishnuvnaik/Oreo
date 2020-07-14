@@ -11,8 +11,12 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/Dashboard" component={Dashboard} />
-          <Route path="/product" component={Product} />
-          <Route path="/productList" component={ProductList} />
+          <Route path="/product" component={(Product, Dashboard)} />
+          <Route
+            path="/productList"
+            exact={true}
+            component={(ProductList, Dashboard)}
+          />
           <Route
             path="/productDetails"
             exact={true}
