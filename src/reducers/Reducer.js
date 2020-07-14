@@ -6,6 +6,7 @@ const initialstate = {
   displayCard: "description",
   currentProduct: products[0],
   productList: [],
+  search: "",
 };
 export default (state = initialstate, action) => {
   switch (action.type) {
@@ -48,6 +49,20 @@ export default (state = initialstate, action) => {
         ...state,
         productList: [...state.productList, action.payload],
       };
+    case "SEARCH":
+      return {
+        ...state,
+        search: action.payload,
+      };
+    case "REMOVE_PRODUCT":
+      const removeData = state.productList.filter(
+        (product) => product.id !== action.payload
+      );
+      return {
+        ...state,
+        productList: removeData,
+      };
+
     default:
       return state;
   }

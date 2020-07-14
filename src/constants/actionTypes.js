@@ -5,3 +5,5 @@ export const REVIEW = "REVIEW";
 export const ABOUT = "ABOUT";
 export const CURRENT_PRODUCT = "CURRENT_PRODUCT";
 export const ADD_PRODUCT = "ADD_PRODUCT";
+export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
+export const SEARCH = "SEARCH";
