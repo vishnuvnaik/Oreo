@@ -170,11 +170,11 @@ function ResponsiveDrawer(props) {
                       props.handleSearch(e.target.value);
                     }}
                   />
+                  <SearchIcon
+                    className="blackColor"
+                    style={{ fontSize: "18px" }}
+                  />
                 </div>
-                <SearchIcon
-                  className="blackColor"
-                  style={{ fontSize: "18px" }}
-                />
               </div>
               <div className="row1">
                 <div className="toolBar1">

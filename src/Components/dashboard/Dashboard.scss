@@ -330,7 +330,7 @@
   border-radius: 30px;
   padding: 5px;
   min-width: 300px;
-  max-width: 350px;
+
   height: 46px;
   margin-left: 12px;
 }
@@ -368,6 +368,10 @@
   .productNamePro {
     display: none;
   }
+  .wordStyles {
+    font-family: "Montserrat", Arial, Tahoma, sans-serif;
+    font-size: 17px;
+  }
   .homeIcon1Product {
     display: flex;
     justify-content: center;
@@ -377,7 +381,7 @@
     border-radius: 30px;
     padding: 5px;
     min-width: 300px;
-    max-width: 350px;
+
     height: 46px;
     margin-left: 12px;
     margin-top: 10px;
@@ -401,7 +405,12 @@
     min-height: 96px;
   }
   .search {
-    display: none;
+    display: flex;
+    width: 180px;
+    input {
+      display: flex;
+      width: 150px;
+    }
   }
   .row1 {
     @include displayRow();
@@ -410,12 +419,7 @@
   .rootClass {
     display: list-item;
   }
-  .notify .point {
-    display: none;
-  }
-  .notify .heartbit {
-    display: none;
-  }
+
   .rowProduct {
     margin-top: 94px;
     display: flex;
