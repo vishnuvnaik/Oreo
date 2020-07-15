@@ -1,4 +1,9 @@
-import { CURRENT_PRODUCT, ADD_PRODUCT, SEARCH } from "./actionTypes";
+import {
+  CURRENT_PRODUCT,
+  ADD_PRODUCT,
+  SEARCH,
+  GET_PRODUCT,
+} from "./actionTypes";
 export const setCurrentProduct = (id) => {
   return {
     type: CURRENT_PRODUCT,
@@ -12,12 +17,7 @@ export const addProduct = (product) => {
     payload: product,
   };
 };
-export const removeProduct = (id) => {
-  return {
-    type: actionTypes.REMOVE_PRODUCT,
-    payload: id,
-  };
-};
+
 export const search = (char) => {
   return {
     type: SEARCH,

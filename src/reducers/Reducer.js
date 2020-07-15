@@ -45,6 +45,10 @@ export default (state = initialstate, action) => {
         ),
       };
     case "ADD_PRODUCT":
+      localStorage.setItem(
+        "product",
+        JSON.stringify([...state.productList, action.payload])
+      );
       return {
         ...state,
         productList: [...state.productList, action.payload],
@@ -58,6 +62,7 @@ export default (state = initialstate, action) => {
       const removeData = state.productList.filter(
         (product) => product.id !== action.payload
       );
+      localStorage.setItem("product", JSON.stringify(removeData));
       return {
         ...state,
         productList: removeData,
