@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import "./ProductListStyle.scss";
 import productlistdata from "./productList.json";
 import ReactPaginate from "react-paginate";
@@ -7,7 +7,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import { connect } from "react-redux";
 import { IconButton } from "@material-ui/core";
-import { REMOVE_PRODUCT } from "../../constants/actionTypes";
+import { REMOVE_PRODUCT, GET_PRODUCT } from "../../constants/actionTypes";
 
 const ProductList = (props) => {
   return (
@@ -22,7 +22,7 @@ const ProductList = (props) => {
           <h6>Action</h6>
         </div>
         <Divider />
-        {props.productList.map((data) => {
+        {JSON.parse(localStorage.getItem("product")).map((data) => {
           return (
             <React.Fragment key={data.id}>
               <div className="rowWiselist">
@@ -81,6 +81,7 @@ const removeProduct = (id) => {
     payload: id,
   };
 };
+
 const mapStateToProps = (state) => {
   return {
     productList: state.productList,
@@ -89,6 +90,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleDelete: (id) => dispatch(removeProduct(id)),
+    //getProduct: () => dispatch(getProduct()),
   };
 };
 
